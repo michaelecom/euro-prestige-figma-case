@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="app">
+		<div class="content content_area">
+			<div class="slider slider_area">
+				<div class="slider-slides slider-slides_area">
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="img/slider/1_1x.png" alt="">
+					</div>
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="" alt="">
+					</div>
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="img/slider/1_1x.png" alt="">
+					</div>
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="" alt="">
+					</div>
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="img/slider/1_1x.png" alt="">
+					</div>
+					<div class="slider-slides__slide_area js__slide_selector">
+						<img src="" alt="">
+					</div>
+				</div>
+
+				<div class="slider-controls slider-controls_area">
+					<div class="slider-controls__prev slider-controls__prev_area" onclick="plusSlides(-1)">
+						<span>&#10094;</span>
+					</div>
+					<div class="slider-controls__next slider-controls__next_area" onclick="plusSlides(1)">
+						<span>&#10095;</span>
+					</div>
+
+					<div class="slider-controls__dots_area">
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(1)"></span>
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(2)"></span>
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(3)"></span>
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(4)"></span>
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(5)"></span>
+						<span class="slider-controls__dot js__dot_selector" onclick="currentSlide(6)"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="banners banners_area" id="banners">
+				<a href="#banners" class="banner banner_area">
+					<img src="img/banners/1_1x.png" alt="Профессиональная уборка">
+					<div class="banner__gradient banner__gradient_area"></div>
+					<h3 class="banner__title_area banner__title_text">
+						Профессиональная уборка
+					</h3>
+					<p class="banner__desc_area banner__desc_text banner__desc_truncate">
+						Товары для уборки офисов и салонов красоты, аэропортов и общественных помещений
+					</p>
+				</a>
+				<a href="#banners" class="banner banner_area">
+					<img src="img/banners/2_1x.png" alt="Профессиональная косметика">
+					<div class="banner__gradient banner__gradient_area"></div>
+					<h3 class="banner__title_area banner__title_text">
+						Профессиональная косметика
+					</h3>
+					<p class="banner__desc_area banner__desc_text banner__desc_truncate">
+						Товары для ухода и окрашивания волос, необходимые товары для вашего бизнеса
+					</p>
+				</a>
+			</div>
+
+			<div class="circles circles_area" id="circles">
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/1_1x.png" alt="Окрашивание волос">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Окрашивание волос
+					</a>
+				</div>
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/2_1x.png" alt="Уход за волосами">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Уход за волосами
+					</a>
+				</div>
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/3_1x.png" alt="Средства индивидуальной защиты">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Средства индивидуальной защиты
+					</a>
+				</div>
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/4_1x.png" alt="Средства личной гигиены">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Средства личной гигиены
+					</a>
+				</div>
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/5_1x.png" alt="Профессиональная химия">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Профессиональная химия
+					</a>
+				</div>
+				<div class="circle-item circle-item_area">
+					<a href="#circles" class="circle-item__img circle-item__img_area">
+						<img src="img/rounded/6_1x.png" alt="Подарочные наборы">
+					</a>
+					<a href="#circles" class="circle-item__title circle-item__title_text circle-item__title_truncate">
+						Подарочные наборы
+					</a>
+				</div>
+			</div>
+
+			<h2 class="header header_area header_text" id="popular">
+				Популярное
+			</h2>
+
+			<div class="offers offers_area">
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/1_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_hit">
+						Хит продаж
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad?
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">11 840 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/2_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptates unde tempore.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">5 320 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/3_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 40 %
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis saepe alias aliquid
+						dolore ratione?
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">840 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/4_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ratione.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">1 920 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/5_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">735 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#popular" class="offer-item__img offer-item__img_area">
+						<img src="img/popular/6_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#popular" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore dicta consequatur quasi
+						porro impedit!
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">2456 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="brand-offer brand-offer_area" id="brand-offer">
+				<img src="img/matrix/1x.png" alt="matrix">
+				<label class="brand-offer_text brand_offer_truncate">
+					Новая коллекция красок <br>
+					от известного бренда №1
+				</label>
+				<a href="#brand-offer" class="brand-offer_btn brand-offer_btn_text">Смотреть коллекцию</a>
+			</div>
+
+			<h2 class="header header_area header_text" id="stock">
+				Акции
+			</h2>
+
+			<div class="stock stock_area">
+				<div class="stock-item stock-item_area">
+					<a href="#stock" class="stock-item__img stock-item__img_area">
+						<img src="img/stock/1_1x.png" alt="">
+					</a>
+					<a href="#stock" class="stock-item__title stock-item__title_text">
+						Скидка на первый заказ 10%
+					</a>
+					<div class="stock-item__desc stock-item__desc_text stock-item__desc_truncate">
+						Акция для новых клиентов компании, с 10-го по 15-е апреля 2022 сделай заказ и получи скидку.
+					</div>
+				</div>
+				<div class="stock-item stock-item_area">
+					<a href="#stock" class="stock-item__img stock-item__img_area">
+						<img src="img/stock/2_1x.png" alt="">
+					</a>
+					<a href="#stock" class="stock-item__title stock-item__title_text">
+						Приведи клиента получи 5000 руб
+					</a>
+					<div class="stock-item__desc stock-item__desc_text stock-item__desc_truncate">
+						Мы приготовили бонус для тех кто приведет нам нового клиента с 15-го по 20-е апреля 2022
+					</div>
+				</div>
+				<div class="stock-item stock-item_area">
+					<a href="#stock" class="stock-item__img stock-item__img_area">
+						<img src="img/stock/3_1x.png" alt="">
+					</a>
+					<a href="#stock" class="stock-item__title stock-item__title_text">
+						Мы Вконтакте! А вы?
+					</a>
+					<div class="stock-item__desc stock-item__desc_text stock-item__desc_truncate">
+						Акции и конкурсы, а так же новости компании можно найти в нашей группе Вконтакте
+					</div>
+				</div>
+				<div class="stock-item stock-item_area">
+					<a href="#stock" class="stock-item__img stock-item__img_area">
+						<img src="img/stock/4_1x.png" alt="">
+					</a>
+					<a href="#stock" class="stock-item__title stock-item__title_text">
+						Расширяем границы! Бренд Epica
+					</a>
+					<div class="stock-item__desc stock-item__desc_text stock-item__desc_truncate">
+						Ноывй бренд в торговой матрице компании, уже на полках. Подробности у менеджеров компании!
+					</div>
+				</div>
+			</div>
+
+			<h2 class="header header_area header_text" id="discounts">
+				Скидки %
+			</h2>
+
+			<div class="offers offers_area">
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/1_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_hit">
+						Хит продаж
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad?
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">11 840 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/2_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptates unde tempore.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">5 320 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/3_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 40 %
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">840 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/4_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ratione.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">1 920 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/5_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">735 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+				<div class="offer-item offer-item_area">
+					<a href="#discounts" class="offer-item__img offer-item__img_area">
+						<img src="img/discounts/6_1x.png" alt="">
+					</a>
+					<div class="offer-item__tag offer-item__tag_area offer-item__tag_text offer-item__tag_discount">
+						- 30 %
+					</div>
+					<a href="#discounts" class="offer-item__title offer-item__title_text offer-item__title_truncate">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore dicta consequatur quasi
+						porro impedit!
+					</a>
+					<div class="offer-item__price offer-item__price_area">
+						<div class="offer-item__price_now offer-item__price_text">2456 ₽</div>
+						<div class="offer-item__price_old offer-item__price_text">6 490 ₽</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="header header_area header_text" id="brands">
+				Бренды
+			</h2>
+
+			<div class="brands brands_area">
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/1_1x.png" alt="">
+				</a>
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/2_1x.png" alt="">
+				</a>
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/3_1x.png" alt="">
+				</a>
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/4_1x.png" alt="">
+				</a>
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/5_1x.png" alt="">
+				</a>
+				<a href="#brands" class="brand-item brand-item_area">
+					<img src="img/brands/6_1x.png" alt="">
+				</a>
+			</div>
+
+		</div>
+
+		<div class="footer footer_area">
+			<div class="footer-acquaintance footer-acquaintance_area">
+				<label
+					class="footer-acquaintance__header footer-acquaintance__header_area footer-acquaintance__header_text">
+					Познакомьтесь с нами
+				</label>
+				<div class="footer-acquaintance__links footer-acquaintance__links_area">
+					<a href="#" class="footer__link footer__link_area footer__link_text">О компании</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Контакты</a>
+				</div>
+				<div
+					class="footer-acquaintance__social footer-acquaintance__social_area footer-acquaintance__social_text">
+					<label>Мы в соц сетях</label>
+					<a href="https://vk.com/europrestige_group">
+						<div class="footer-acquaintance__svg footer-acquaintance__svg_area"></div>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer-help footer-help_area">
+				<label class="footer-help__header footer-help__header_area footer-help__header_text">
+					Помощь по сайту
+				</label>
+				<div class="footer-help__links footer-help__links_area">
+					<a href="#" class="footer__link footer__link_area footer__link_text">Личный кабинет</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Ваши заказы</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Тарифы и политика доставки</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Политика возврата</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Бизнес-цены</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Помощь</a>
+				</div>
+			</div>
+
+			<div class="footer-copyright footer-copyright_area">
+				<p class="footer-copyright__desc footer-copyright__desc_area footer-copyright__desc_text">
+					2018 Все права защищены на все материалы, находящиеся на сайте, охраняются в соответствии с
+					законодательством РФ.
+				</p>
+				<div class="footer-copyright__links footer-copyright__links_area">
+					<a href="#" class="footer__link footer__link_area footer__link_text">Условия использования</a>
+					<a href="#" class="footer__link footer__link_area footer__link_text">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

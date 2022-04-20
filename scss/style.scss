@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap");
+
+@import "grid.scss";
+
+$light-grey-color: #f8f8f8;
+
+$base-text-color: #333;
+$second-text-color: #999;
+
+$slider-control-color: white;
+$slider-dot-color: #e6e6e6;
+$slider-dot-active-color: #c4c4c4;
+
+$banner-text-color: white;
+
+$tag-text-color: white;
+$tag-hit-bg-color: #00a3ff;
+$tag-discount-bg-color: #ff5c00;
+
+$brand-offer-text-color: white;
+
+$brand-item-border-color: #e8e8e8;
+
+*:focus-visible {
+	outline: none;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+.app {
+	// свойства данного селектора возможно переписать напрямую в стили
+	// в данном случае вынесено с целью недублирования кода
+	*[class*="_text"] {
+		font-family: "Roboto";
+		font-style: normal;
+	}
+
+	// свойства данного селектора возможно переписать напрямую в стили
+	// в данном случае вынесено с целью недублирования кода
+	*[class*="_truncate"] {
+		height: 3em;
+		line-height: 1.5em !important;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+
+	.content {
+		& .slider {
+			background: linear-gradient(90deg, #1f82d7 0%, #97cfff 94%);
+
+			&-controls {
+				&__dot {
+					background-color: $slider-dot-color;
+
+					cursor: pointer;
+					transition: 0.5s ease;
+
+					&.active,
+					&:hover {
+						background-color: $slider-dot-active-color;
+					}
+				}
+
+				&__prev {
+					color: $slider-control-color;
+
+					&:hover {
+						background: linear-gradient(90deg, rgba(196, 196, 196, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+
+						cursor: pointer;
+					}
+				}
+
+				&__next {
+					color: $slider-control-color;
+
+					user-select: none;
+
+					&:hover {
+						background: linear-gradient(-90deg, rgba(196, 196, 196, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+
+						cursor: pointer;
+					}
+				}
+
+				&__prev,
+				&__next {
+					& span {
+						font-weight: 400;
+						font-size: 48px;
+					}
+				}
+			}
+		}
+
+		& .banners {
+			& .banner {
+				&__title {
+					&_text {
+						color: $banner-text-color;
+
+						font-weight: 600;
+						font-size: 28px;
+					}
+				}
+
+				&__desc {
+					&_text {
+						color: $banner-text-color;
+
+						font-weight: 400;
+						font-size: 16px;
+					}
+				}
+
+				&__gradient {
+					background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(31, 130, 215, 0.8) 60%);
+				}
+			}
+		}
+
+		& .circles {
+			.circle-item {
+				&__img {
+					background-color: $light-grey-color;
+				}
+
+				&__title {
+					color: $base-text-color;
+
+					&_text {
+						text-align: center;
+
+						font-weight: 400;
+						font-size: 16px;
+
+						&:hover {
+							text-decoration: underline $base-text-color;
+
+							transition: 0.5s ease;
+						}
+					}
+				}
+			}
+		}
+
+		& .header {
+			color: $base-text-color;
+
+			&_text {
+				font-weight: 500;
+				font-size: 28px;
+			}
+		}
+
+		& .offers {
+			.offer-item {
+				&__tag {
+					color: $tag-text-color;
+
+					font-weight: 400;
+					font-size: 13px;
+
+					&_hit {
+						background-color: $tag-hit-bg-color;
+					}
+
+					&_discount {
+						background-color: $tag-discount-bg-color;
+					}
+				}
+
+				&__title {
+					color: $base-text-color;
+
+					&_text {
+						font-weight: 400;
+						font-size: 16px;
+
+						&:hover {
+							text-decoration: underline $base-text-color;
+
+							transition: 0.5s ease;
+						}
+					}
+				}
+
+				&__price {
+					&_now {
+						color: $base-text-color;
+
+						font-weight: 600;
+						font-size: 18px;
+					}
+
+					&_old {
+						color: $second-text-color;
+
+						font-weight: 600;
+						font-size: 14px;
+
+						text-decoration: line-through $base-text-color;
+					}
+				}
+			}
+		}
+
+		& .brand-offer {
+			background: linear-gradient(90deg, #000 40%, rgba(51, 51, 51, 0.6) 98%);
+
+			&_text {
+				color: $brand-offer-text-color;
+
+				text-align: center;
+
+				font-weight: 400;
+				font-size: 28px;
+			}
+
+			&_btn {
+				background-color: transparent;
+
+				border: 2px solid $brand-offer-text-color;
+				box-sizing: border-box;
+
+				&_text {
+					color: $brand-offer-text-color;
+
+					text-align: center;
+
+					font-weight: 500;
+					font-size: 12px;
+				}
+			}
+		}
+
+		& .stock {
+			&__title {
+				color: $base-text-color;
+
+				&_text {
+					font-weight: 500;
+					font-size: 28px;
+				}
+			}
+
+			.stock-item {
+				&__title {
+					color: $base-text-color;
+
+					&_text {
+						font-weight: 500;
+						font-size: 18px;
+
+						&:hover {
+							text-decoration: underline $base-text-color;
+
+							transition: 0.5s ease;
+						}
+					}
+				}
+
+				&__desc {
+					color: $base-text-color;
+
+					&_text {
+						font-weight: 400;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		& .brands {
+			.brand-item {
+				border: 1px solid $brand-item-border-color;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	.footer {
+		background-color: $light-grey-color;
+
+		&__link {
+			color: $base-text-color;
+
+			&_text {
+				font-weight: 400;
+				font-size: 16px;
+
+				height: 2em;
+				line-height: 2em;
+
+				&:hover {
+					text-decoration: underline $base-text-color;
+
+					transition: 0.5s ease;
+				}
+			}
+		}
+
+		&-acquaintance {
+			&__header {
+				color: $base-text-color;
+
+				&_text {
+					font-weight: 500;
+					font-size: 18px;
+				}
+			}
+
+			&__social {
+				color: $base-text-color;
+
+				&_text {
+					font-weight: 400;
+					font-size: 13px;
+				}
+			}
+
+			&__svg {
+				background: url("../img/vk.svg") center no-repeat;
+			}
+		}
+
+		&-help {
+			&__header {
+				color: $base-text-color;
+
+				&_text {
+					font-weight: 500;
+					font-size: 18px;
+				}
+			}
+		}
+
+		&-copyright {
+			& .footer__link_text,
+			&__desc_text {
+				color: $base-text-color;
+
+				font-weight: 400;
+				font-size: 13px;
+			}
+
+			&__desc {
+				&_text {
+					height: 1.75em;
+					line-height: 1.75em;
+				}
+			}
+		}
+	}
+}

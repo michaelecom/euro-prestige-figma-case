@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+}
+.app .content_area {
+  display: inherit;
+  grid-row-gap: 48px;
+  width: 1440px;
+  justify-self: center;
+  margin-top: 140px;
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 1440px) {
+  .app .content_area {
+    width: inherit;
+  }
+}
+.app .content .slider_area {
+  display: inherit;
+  width: inherit;
+  height: 360px;
+  border-radius: 4px;
+}
+.app .content .slider-slides_area {
+  display: inherit;
+  grid-area: 1/1/-1/-1;
+}
+.app .content .slider-slides__slide_area {
+  display: none;
+  place-self: center;
+}
+.app .content .slider-slides__slide_area.active {
+  display: inherit;
+}
+.app .content .slider-controls_area {
+  display: inherit;
+  grid-area: 1/1/-1/-1;
+  grid-template: 10% auto 10%/20% auto 20%;
+}
+.app .content .slider-controls__dots_area {
+  display: inherit;
+  grid-area: 3/2/span 1/span 1;
+  grid-template-columns: repeat(6, auto);
+  grid-column-gap: 12px;
+  justify-content: center;
+  align-content: flex-start;
+}
+.app .content .slider-controls__dot {
+  width: 12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.app .content .slider-controls__prev_area {
+  display: inherit;
+  grid-area: 1/1/span 3/span 1;
+  width: 100%;
+  height: 100%;
+  place-self: center;
+  place-content: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.app .content .slider-controls__next_area {
+  display: inherit;
+  grid-area: 1/3/span 3/span 1;
+  width: 100%;
+  height: 100%;
+  place-self: center;
+  place-content: center;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.app .content .banners_area {
+  display: inherit;
+  grid-template-columns: repeat(2, 690px);
+  height: 360px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .banners_area {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 360px);
+    grid-row-gap: 48px;
+    height: 768px;
+    justify-content: center;
+  }
+}
+.app .content .banners .banner_area {
+  display: inherit;
+  grid-template-rows: 72% 24%;
+  grid-row-gap: 4%;
+  border-radius: 4px;
+}
+.app .content .banners .banner img {
+  grid-area: 1/1/3/-1;
+  border-radius: inherit;
+}
+.app .content .banners .banner__title_area {
+  grid-area: 1/1/span 1/span 1;
+  align-self: flex-end;
+}
+.app .content .banners .banner__desc_area {
+  grid-area: 2/1/span 1/span 1;
+}
+.app .content .banners .banner__title_area, .app .content .banners .banner__desc_area {
+  margin: 0 32% 0 8%;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .banners .banner__title_area, .app .content .banners .banner__desc_area {
+    margin: 0 16%;
+  }
+}
+.app .content .banners .banner__gradient_area {
+  grid-area: 1/1/3/-1;
+  width: 100%;
+  height: 100%;
+  place-self: center;
+  border-radius: inherit;
+}
+.app .content .circles_area {
+  display: inherit;
+  grid-template-columns: repeat(6, 1fr);
+  grid-row-gap: 48px;
+  justify-content: center;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .circles_area {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .content .circles_area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.app .content .circles .circle-item_area {
+  display: inherit;
+  grid-row-gap: 24px;
+  justify-items: center;
+}
+.app .content .circles .circle-item__img_area {
+  display: inherit;
+  width: 180px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.app .content .circles .circle-item__img img {
+  place-self: center;
+}
+.app .content .header_area {
+  justify-self: self-start;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .header {
+    justify-self: center;
+  }
+}
+.app .content .offers_area {
+  display: inherit;
+  grid-template-columns: repeat(6, 210px);
+  grid-row-gap: 48px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .offers_area {
+    grid-template-columns: repeat(3, 210px);
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .content .offers_area {
+    grid-template-columns: repeat(2, 210px);
+    justify-content: space-around;
+  }
+}
+.app .content .offers .offer-item_area {
+  display: inherit;
+  grid-row-gap: 24px;
+}
+.app .content .offers .offer-item__img_area {
+  display: inherit;
+  grid-area: 1/1/-1/-1;
+  width: 210px;
+  aspect-ratio: 1;
+}
+.app .content .offers .offer-item__img img {
+  place-self: center;
+}
+.app .content .offers .offer-item__tag_area {
+  display: inherit;
+  grid-area: 1/1/-1/-1;
+  justify-self: start;
+  align-self: flex-end;
+  padding: 8px 12px;
+  border-radius: 32px;
+}
+.app .content .offers .offer-item__price_area {
+  display: inherit;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 12px;
+  justify-self: start;
+  align-items: center;
+}
+.app .content .brand-offer_area {
+  display: inherit;
+  grid-template-columns: repeat(3, 1fr);
+  height: 210px;
+  place-items: center;
+  border-radius: 4px;
+}
+.app .content .brand-offer img {
+  margin-bottom: 16px;
+}
+.app .content .brand-offer a {
+  padding: 8px 36px;
+  border-radius: 4px;
+}
+.app .content .stock_area {
+  display: inherit;
+  grid-template-columns: repeat(4, 330px);
+  grid-row-gap: 48px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .stock_area {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: space-around;
+  }
+}
+.app .content .stock .stock-item_area {
+  display: inherit;
+  grid-row-gap: 8px;
+}
+.app .content .stock .stock-item__img_area {
+  display: inherit;
+  margin-bottom: 24px;
+  width: 330px;
+  aspect-ratio: 1;
+}
+.app .content .stock .stock-item__img img {
+  border-radius: 4px;
+  place-self: center;
+}
+.app .content .brands_area {
+  display: inherit;
+  grid-template-columns: repeat(6, 210px);
+  grid-row-gap: 48px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .app .content .brands_area {
+    grid-template-columns: repeat(3, 210px);
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .content .brands_area {
+    grid-template-columns: repeat(2, 210px);
+    justify-content: space-around;
+  }
+}
+.app .content .brands_area .brand-item {
+  border-radius: 4px;
+}
+.app .content .brands_area .brand-item_area {
+  display: inherit;
+  width: 210px;
+  aspect-ratio: 1.6;
+}
+.app .content .brands_area .brand-item img {
+  place-self: center;
+}
+.app .footer_area {
+  display: inherit;
+  grid-template-columns: auto repeat(6, 240px) auto;
+  width: 100%;
+  align-self: flex-end;
+}
+@media screen and (max-width: 1440px) {
+  .app .footer_area {
+    grid-template-columns: auto repeat(3, 320px) auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .footer_area {
+    grid-template-columns: auto 480px auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+.app .footer__link_area {
+  display: inherit;
+  align-self: flex-start;
+}
+.app .footer-acquaintance_area {
+  display: inherit;
+  grid-area: 1/2/span 1/span 1;
+  grid-template-rows: 64px repeat(6, 1fr) 64px;
+}
+@media screen and (max-width: 960px) {
+  .app .footer-acquaintance_area {
+    grid-area: 2/2/span 1/span 1;
+    grid-template-rows: 12px repeat(6, 1fr) 12px;
+  }
+}
+.app .footer-acquaintance__header_area {
+  grid-row: 2/span 1;
+}
+.app .footer-acquaintance__links_area {
+  grid-row: 3/span 3;
+}
+.app .footer-acquaintance__social_area {
+  display: inherit;
+  grid-row: 6/span 2;
+}
+.app .footer-acquaintance__social a {
+  display: inherit;
+  width: 64px;
+  height: 64px;
+}
+.app .footer-acquaintance__svg_area {
+  display: inherit;
+  width: 40px;
+  height: 40px;
+  place-self: center;
+}
+.app .footer-acquaintance__header_area, .app .footer-acquaintance__links_area, .app .footer-acquaintance__social_area {
+  margin-left: 8%;
+}
+.app .footer-help_area {
+  display: inherit;
+  grid-area: 1/3/span 1/span 2;
+  grid-template-rows: 64px repeat(6, 1fr) 64px;
+  margin: 0 24%;
+}
+@media screen and (max-width: 1440px) {
+  .app .footer-help_area {
+    grid-area: 1/3/span 1/span 1;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .footer-help_area {
+    grid-area: 1/2/span 1/span 1;
+    grid-template-rows: 64px repeat(6, 1fr) 12px;
+    margin: 0;
+  }
+}
+.app .footer-help__header_area {
+  grid-row: 2/span 1;
+}
+.app .footer-help__links_area {
+  grid-row: 3/span 5;
+}
+.app .footer-help__header_area, .app .footer-help__links_area {
+  margin-left: 8%;
+}
+.app .footer-copyright_area {
+  display: inherit;
+  grid-area: 1/5/span 1/span 1;
+  grid-template-rows: 64px repeat(6, 1fr) 64px;
+}
+@media screen and (max-width: 1440px) {
+  .app .footer-copyright_area {
+    grid-area: 1/4/span 1/span 1;
+  }
+}
+@media screen and (max-width: 960px) {
+  .app .footer-copyright_area {
+    grid-area: 3/2/span 1/span 1;
+    grid-template-rows: 12px repeat(6, 1fr) 64px;
+  }
+}
+.app .footer-copyright__desc_area {
+  grid-row: 3/span 2;
+}
+.app .footer-copyright__links_area {
+  grid-row: 6/span 2;
+}
+.app .footer-copyright__desc_area, .app .footer-copyright__links_area {
+  margin-left: 8%;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.app *[class*=_text] {
+  font-family: "Roboto";
+  font-style: normal;
+}
+.app *[class*=_truncate] {
+  height: 3em;
+  line-height: 1.5em !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.app .content .slider {
+  background: linear-gradient(90deg, #1f82d7 0%, #97cfff 94%);
+}
+.app .content .slider-controls__dot {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.app .content .slider-controls__dot.active, .app .content .slider-controls__dot:hover {
+  background-color: #c4c4c4;
+}
+.app .content .slider-controls__prev {
+  color: white;
+}
+.app .content .slider-controls__prev:hover {
+  background: linear-gradient(90deg, rgba(196, 196, 196, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  cursor: pointer;
+}
+.app .content .slider-controls__next {
+  color: white;
+  user-select: none;
+}
+.app .content .slider-controls__next:hover {
+  background: linear-gradient(-90deg, rgba(196, 196, 196, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  cursor: pointer;
+}
+.app .content .slider-controls__prev span, .app .content .slider-controls__next span {
+  font-weight: 400;
+  font-size: 48px;
+}
+.app .content .banners .banner__title_text {
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+}
+.app .content .banners .banner__desc_text {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.app .content .banners .banner__gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(31, 130, 215, 0.8) 60%);
+}
+.app .content .circles .circle-item__img {
+  background-color: #f8f8f8;
+}
+.app .content .circles .circle-item__title {
+  color: #333;
+}
+.app .content .circles .circle-item__title_text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+.app .content .circles .circle-item__title_text:hover {
+  text-decoration: underline #333;
+  transition: 0.5s ease;
+}
+.app .content .header {
+  color: #333;
+}
+.app .content .header_text {
+  font-weight: 500;
+  font-size: 28px;
+}
+.app .content .offers .offer-item__tag {
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+}
+.app .content .offers .offer-item__tag_hit {
+  background-color: #00a3ff;
+}
+.app .content .offers .offer-item__tag_discount {
+  background-color: #ff5c00;
+}
+.app .content .offers .offer-item__title {
+  color: #333;
+}
+.app .content .offers .offer-item__title_text {
+  font-weight: 400;
+  font-size: 16px;
+}
+.app .content .offers .offer-item__title_text:hover {
+  text-decoration: underline #333;
+  transition: 0.5s ease;
+}
+.app .content .offers .offer-item__price_now {
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}
+.app .content .offers .offer-item__price_old {
+  color: #999;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: line-through #333;
+}
+.app .content .brand-offer {
+  background: linear-gradient(90deg, #000 40%, rgba(51, 51, 51, 0.6) 98%);
+}
+.app .content .brand-offer_text {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+}
+.app .content .brand-offer_btn {
+  background-color: transparent;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+.app .content .brand-offer_btn_text {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+.app .content .stock__title {
+  color: #333;
+}
+.app .content .stock__title_text {
+  font-weight: 500;
+  font-size: 28px;
+}
+.app .content .stock .stock-item__title {
+  color: #333;
+}
+.app .content .stock .stock-item__title_text {
+  font-weight: 500;
+  font-size: 18px;
+}
+.app .content .stock .stock-item__title_text:hover {
+  text-decoration: underline #333;
+  transition: 0.5s ease;
+}
+.app .content .stock .stock-item__desc {
+  color: #333;
+}
+.app .content .stock .stock-item__desc_text {
+  font-weight: 400;
+  font-size: 14px;
+}
+.app .content .brands .brand-item {
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+.app .footer {
+  background-color: #f8f8f8;
+}
+.app .footer__link {
+  color: #333;
+}
+.app .footer__link_text {
+  font-weight: 400;
+  font-size: 16px;
+  height: 2em;
+  line-height: 2em;
+}
+.app .footer__link_text:hover {
+  text-decoration: underline #333;
+  transition: 0.5s ease;
+}
+.app .footer-acquaintance__header {
+  color: #333;
+}
+.app .footer-acquaintance__header_text {
+  font-weight: 500;
+  font-size: 18px;
+}
+.app .footer-acquaintance__social {
+  color: #333;
+}
+.app .footer-acquaintance__social_text {
+  font-weight: 400;
+  font-size: 13px;
+}
+.app .footer-acquaintance__svg {
+  background: url("../img/vk.svg") center no-repeat;
+}
+.app .footer-help__header {
+  color: #333;
+}
+.app .footer-help__header_text {
+  font-weight: 500;
+  font-size: 18px;
+}
+.app .footer-copyright .footer__link_text, .app .footer-copyright__desc_text {
+  color: #333;
+  font-weight: 400;
+  font-size: 13px;
+}
+.app .footer-copyright__desc_text {
+  height: 1.75em;
+  line-height: 1.75em;
+}
